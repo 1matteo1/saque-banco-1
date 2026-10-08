@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caixa Eletrônico</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="pagina">
+    <section class="cartao">
+      <div class="faixa"></div>
+      <header class="cabecalho">
+        <span class="icone" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+            <circle cx="12" cy="12" r="2.2"></circle>
+          </svg>
+        </span>
+        <div>
+          <h1>Caixa Eletrônico</h1>
+          <p class="subtitulo">Terminal de saque</p>
+        </div>
+      </header>
+
+      <div class="miolo">
+        <div class="saldo">
+          <p class="rotulo">Saldo disponível</p>
+          <p id="saldo" class="valor-saldo">R$ 1.000,00</p>
+        </div>
+        <p class="rotulo notas">Notas disponíveis</p>
+        <ul class="lista-notas">
+          <li>R$ 100</li>
+          <li>R$ 50</li>
+          <li>R$ 20</li>
+          <li>R$ 10</li>
+          <li>R$ 5</li>
+          <li>R$ 2</li>
+        </ul>
+      </div>
+
+      <form id="form-saque" novalidate>
+        <label for="valor-saque">Valor do saque</label>
+        <div class="campo">
+          <span class="prefixo" aria-hidden="true">R$</span>
+          <input id="valor-saque" name="valor" inputmode="numeric" autocomplete="off" spellcheck="false" placeholder="Ex.: 280">
+        </div>
+        <p id="ajuda-valor" class="ajuda">Somente valores inteiros, sem centavos.</p>
+        <button type="submit">Sacar</button>
+      </form>
+
+      <div class="rodape">
+        <div id="resultado" class="painel" role="status" aria-live="polite">
+          <p>As notas do saque aparecem aqui.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
